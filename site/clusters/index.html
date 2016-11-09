@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="liudong">
+  
+  <title>集群部署 - Pinbot 运维</title>
+  
+
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "集群部署";
+    var mkdocs_page_input_path = "clusters.md";
+    var mkdocs_page_url = "/clusters/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-36723568-3', 'mkdocs.org');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Pinbot 运维</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../operation/">运维相关</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../seafile/">Seafile私有云使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../gitUse/">Gitlab使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../openvpn/">VPN部署使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../vps/">VPS使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../network/">网络手册</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../jenkins/">Jenkins部署使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../gitlab/">Gitlab部署</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../zabbix/">Zabbix使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../address/">常用地址</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">集群部署</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#_1">集群部署</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../daily/">日常笔记</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Pinbot 运维</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>集群部署</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="_1">集群部署<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<ol>
+<li>集群地址：<a href="https://github.com/elastic/elasticsearch">https://github.com/elastic/elasticsearch</a></li>
+<li>Fork到自己的项目中，得到项目地址为：<a href="https://github.com/FighterLD/elasticsearch">https://github.com/FighterLD/elasticsearch</a></li>
+<li>clone代码到需要部署的Linux服务器</li>
+</ol>
+<pre><code>#--depth 1 表示取最近一次修改的项目
+git clone --depth 1 https://github.com/FighterLD/elasticsearch.git
+</code></pre>
+
+<ol>
+<li>elasticsearch配置信息</li>
+</ol>
+<pre><code>mv elasticsearch-rtf-2.2.0 elasticsearch-rtf
+cd elasticsearch-rtf
+vim config/elasticsearch.yml
+#集群显示名 配置前需空一格
+ cluster.name: pinbot-220   #pinbot-220
+ network.bind_host: &quot;0.0.0.0&quot;
+ network.publish_host: &quot;192.168.0.222&quot;   #设置对外访问的IP
+ discovery.zen.ping.multicast.enabled: false    #设置禁止广播查找同网段集群
+ discovery.zen.ping.unicast.hosts: [&quot;192.168.0.220&quot;, &quot;192.168.0.224&quot;]  #设置集群中其他节点IP
+</code></pre>
+
+<ol>
+<li>supervisor守护进程配置</li>
+</ol>
+<pre><code>#添加supervisor启动信息
+vim supervisor.elasticsearch.conf
+[program:elasticsearch]
+command=/home/bigdata/github/elasticsearch-rtf/bin/elasticsearch -Dnetwork.host=0.0.0.0
+directory=/home/bigdata/github/elasticsearch-rtf
+user=bigdata
+;environment=JAVA_OPTS=&quot;-Xmx64m -Xms32m&quot;,ES_MIN_MEM=32m,ES_MAX_MEM=64m
+autostart=true
+autorestart=true
+redirect_stderr=true
+stdout_logfile=/data/supervisor/elasticsearch/logs/supervisor.out.log
+stderr_logfile=/data/supervisor/elasticsearch/logs/supervisor.out.err
+</code></pre>
+
+<ol>
+<li>日志目录创建
+ ```
+mkdir -p /data/supervisor/elasticsearch/logs</li>
+</ol>
+<pre><code>
+7. 启动Supervisor进程并拉起集群
+</code></pre>
+
+<p>supervisord -c /home/bigdata/github/elasticsearch-rtf/supervisor.elasticsearch.conf</p>
+<pre><code>
+8. 同步集群到其他节点
+</code></pre>
+
+<p>sudo scp -r /home/bigdata/github/elasticsearch-rtf bigdata@192.168.0.220:~/github/
+sudo scp -r /home/bigdata/github/elasticsearch-rtf bigdata@192.168.0.224:~/github/
+注：同步后需要：
+1、修改elasticsearch配置信息中的 network.publish_host: &ldquo;192.168.0.222&rdquo;   #设置对外访问的IP
+2、启动Supervisor进程并拉起集群</p>
+<pre><code>
+9. 给集群加上Git源
+</code></pre>
+
+<p>git remote add origin https://github.com/wwwa/elasticsearch-rtf.git &ndash;fetch
+```</p>
+<ol>
+<li>集群后台管理
+<a href="http://192.168.0.222:9200/_plugin/rtf/">http://192.168.0.222:9200/_plugin/rtf/</a></li>
+</ol>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../daily/" class="btn btn-neutral float-right" title="日常笔记">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../address/" class="btn btn-neutral" title="常用地址"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../address/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../daily/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

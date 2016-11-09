@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="liudong">
+  
+  <title>VPS使用 - Pinbot 运维</title>
+  
+
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "VPS使用";
+    var mkdocs_page_input_path = "vps.md";
+    var mkdocs_page_url = "/vps/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-36723568-3', 'mkdocs.org');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Pinbot 运维</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../operation/">运维相关</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../seafile/">Seafile私有云使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../gitUse/">Gitlab使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../openvpn/">VPN部署使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">VPS使用</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#vpsshadowsocks_server">VPS使用及Shadowsocks Server部署</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#shadowsocks_server">Shadowsocks Server部署安装</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../network/">网络手册</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../jenkins/">Jenkins部署使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../gitlab/">Gitlab部署</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../zabbix/">Zabbix使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../address/">常用地址</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../clusters/">集群部署</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../daily/">日常笔记</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Pinbot 运维</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>VPS使用</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="vpsshadowsocks_server">VPS使用及Shadowsocks Server部署<a class="headerlink" href="#vpsshadowsocks_server" title="Permanent link">&para;</a></h2>
+<p>Linode日本主机<a href="https://www.linode.com/pricing">https://www.linode.com/pricing</a>(只有最快，没有更快)<br />
+优点：<br />
+1、连接速度高；<br />
+2、稳定性较好；<br />
+3、网络延迟很小；<br />
+4、可以部署shadowsocks, 部署公司网站(不需要备案)。<br />
+缺点：购买机器价格较高；</p>
+<p>测试主机: <a href="http://speedtest.tokyo.linode.com/100MB-tokyo.bin">http://speedtest.tokyo.linode.com/100MB-tokyo.bin</a></p>
+<p>Linode机器购买帮助指南：<br />
+1. 首月指今天到月底最后一天，不足一个整月的按天计价；<br />
+2. 价格计算公式：<a href="http://www.ivpser.com/%E4%BA%A7%E5%93%81%E4%BB%B7%E6%A0%BC">http://www.ivpser.com/%E4%BA%A7%E5%93%81%E4%BB%B7%E6%A0%BC</a><br />
+3. 自助购买的最全指南：<a href="http://www.ivpser.com/linode-buy-yourself">http://www.ivpser.com/linode-buy-yourself</a></p>
+<p>Linode 按自然月购买, 首月通过自助购买平台 <a href="http://cp.ivpser.com/buylinode">http://cp.ivpser.com/buylinode</a><br />
+<img alt="Alt text" src="../images/VPS1.png" /></p>
+<p>账号信息：<br />
+后台面板: <a href="http://manager.linode.com">http://manager.linode.com</a><br />
+用户名: Pinbot8, 密码: Pinbot8123a<br />
+默认SSH帐号:root, 密码:linodePass<br />
+IP 地址: 106.186.113.14  </p>
+<p>后台登录界面：<br />
+<img alt="Alt text" src="../images/VPS2.png" /></p>
+<p>后台管理界面：<br />
+<img alt="Alt text" src="../images/VPS3.png" /></p>
+<p>VPS实例界面：<br />
+<img alt="Alt text" src="../images/VPS4.png" /></p>
+<p>登录方式：ssh root@106.186.113.14</p>
+<p>Linode的配置和部署:
+<a href="http://www.ivpser.com/how-to-depoly/">http://www.ivpser.com/how-to-depoly/</a></p>
+<h2 id="shadowsocks_server">Shadowsocks Server部署安装<a class="headerlink" href="#shadowsocks_server" title="Permanent link">&para;</a></h2>
+<p>1、服务端安装：</p>
+<p>更新软件源</p>
+<pre><code>sudo apt-get update
+</code></pre>
+
+<p>2、安装 pip 及 ShadowSocks server</p>
+<pre><code>sudo apt-get install python-pip
+pip install shadowsocks
+mkdir /etc/shadowsocks/
+mv /root/.kxrr/ss-server.json /etc/shadowsocks/server.conf
+</code></pre>
+
+<p>3、修改 ShadowSocks server 配置文件如下：</p>
+<pre><code>vim /etc/shadowsocks/server.conf
+{
+&quot;server&quot;:&quot;106.186.113.14&quot;,
+&quot;server_port&quot;:51234,
+&quot;local_port&quot;:1080,
+&quot;password&quot;:&quot;pinbot123&quot;,
+&quot;timeout&quot;:600,
+&quot;method&quot;:&quot;aes-256-cfb&quot;
+}
+</code></pre>
+
+<p>4、ShadowSocks server 启动</p>
+<pre><code>/usr/bin/python /usr/local/bin/ssserver -c /etc/shadowsocks/server.conf -d start
+</code></pre>
+
+<p>5、ShadowSocks server 日志查看</p>
+<pre><code>tail -f /var/log/shadowsocks.log                                                                    
+2016-06-21 03:31:22 INFO     starting server at 106.186.113.14:51234
+2016-06-21 03:33:19 INFO     connecting www.google.com.hk:443 from 61.139.78.89:51608
+
+注：日志检测到 IP为 61.139.78.89（公司公网IP） 的主机访问google地址；
+
+</code></pre>
+
+<p>6、ShadowSocks server 加入开机自启动</p>
+<pre><code>vim /etc/rc.local     #在这个配置文件的exit 0前面一行加上
+
+/usr/bin/python /usr/local/bin/ssserver -c /etc/shadowsocks/server.conf -d start
+</code></pre>
+
+<p>7、ShadowSocks GUI(客户端) 配置<br />
+安装ShadowsocksX.app
+下载地址：<a href="https://shadowsocks.com/client.html">https://shadowsocks.com/client.html</a><br />
+seafile私有云——&gt;开发环境安装包——&gt; ShadowsocksX.app.zip (MAC版本)  </p>
+<p>配置步骤：<br />
+安装后打开Shadowsocks——&gt;服务器——&gt;打开服务器设定——&gt;“+” 添加服务器——&gt;填写服务端配置文件<br />
+<img alt="Alt text" src="../images/Shadowsocksc_client1.png" /></p>
+<p><img alt="Alt text" src="../images/Shadowsocksc_client2.png" /></p>
+<p><img alt="Alt text" src="../images/Shadowsocksc_client3.png" /></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../network/" class="btn btn-neutral float-right" title="网络手册">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../openvpn/" class="btn btn-neutral" title="VPN部署使用"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../openvpn/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../network/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

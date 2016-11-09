@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="liudong">
+  
+  <title>网络手册 - Pinbot 运维</title>
+  
+
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "网络手册";
+    var mkdocs_page_input_path = "network.md";
+    var mkdocs_page_url = "/network/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-36723568-3', 'mkdocs.org');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Pinbot 运维</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../operation/">运维相关</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../seafile/">Seafile私有云使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../gitUse/">Gitlab使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../openvpn/">VPN部署使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../vps/">VPS使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">网络手册</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#_1">网络操作手册</a></li>
+                
+                    <li><a class="toctree-l4" href="#1">1 网络信息状况</a></li>
+                
+                    <li><a class="toctree-l4" href="#2">2 网络卡顿、延时等情况</a></li>
+                
+                    <li><a class="toctree-l4" href="#3_5-10">3 部分或者全部电脑5-10分钟断网</a></li>
+                
+                    <li><a class="toctree-l4" href="#4_10">4 全部电脑断网超过10分钟</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../jenkins/">Jenkins部署使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../gitlab/">Gitlab部署</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../zabbix/">Zabbix使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../address/">常用地址</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../clusters/">集群部署</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../daily/">日常笔记</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Pinbot 运维</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>网络手册</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="_1">网络操作手册<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<div class="toc">
+<ul>
+<li><a href="#_1">网络操作手册</a><ul>
+<li><a href="#1">1 网络信息状况</a><ul>
+<li><a href="#11_30m">1.1 30M电信光纤专线</a></li>
+<li><a href="#12_100m">1.2 100M拨号专线</a></li>
+<li><a href="#13_wifi">1.3 无线WIFI信息</a></li>
+<li><a href="#14">1.4 公共网络信息</a></li>
+<li><a href="#15_wifi">1.5 移动WIFI信息</a></li>
+<li><a href="#16">1.6 各账号、设备信息</a></li>
+<li><a href="#17_wifi">1.7 移动WIFI设置信息</a></li>
+</ul>
+</li>
+<li><a href="#2">2 网络卡顿、延时等情况</a><ul>
+<li><a href="#21">2.1 网络检查</a></li>
+<li><a href="#22">2.2 故障分析</a></li>
+</ul>
+</li>
+<li><a href="#3_5-10">3 部分或者全部电脑5-10分钟断网</a><ul>
+<li><a href="#31">3.1 网络连接设置检查</a></li>
+<li><a href="#32">3.2 故障解决方法</a><ul>
+<li><a href="#321">3.2.1 软件配置问题</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#4_10">4 全部电脑断网超过10分钟</a><ul>
+<li><a href="#41">4.1 应急方案一（电信网络都有问题）：</a></li>
+<li><a href="#42">4.2 应急方案二（电信网络正常，只是交换机硬件故障）：</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="1">1 网络信息状况<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<h3 id="11_30m">1.1 30M电信光纤专线<a class="headerlink" href="#11_30m" title="Permanent link">&para;</a></h3>
+<p>对应外网IP:61.139.78.89<br />
+所属IP网断：192.168.0.2—192.168.0.189,192.168.0.199-192.168.0.202<br />
+所属交换机端口：ether8<br />
+最大稳定宽带速度：3.75 M/s<br />
+限制速度：3 M/s<br />
+网关地址：61.139.78.0<br />
+MAC地址：08:19:A6:24:08:EF<br />
+获取方式：静态获取  </p>
+<h3 id="12_100m">1.2 100M拨号专线<a class="headerlink" href="#12_100m" title="Permanent link">&para;</a></h3>
+<p>对应外网IP:动态IP
+所属IP网断：192.168.0.199-192.168.0.202,192.168.0.203-192.168.0.254<br />
+所属交换机端口：ether6<br />
+最大稳定宽带速度：12.5 M/s<br />
+限制速度：无限制<br />
+网关地址：100.64.0.1  </p>
+<p>交换机 DNS 地址：61.139.2.69<br />
+DNS 所属地址：成都电信DNS  </p>
+<h3 id="13_wifi">1.3 无线WIFI信息<a class="headerlink" href="#13_wifi" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>无线名</th>
+<th>密码</th>
+<th>所用IP</th>
+<th>分配的IP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pinbot-Pro</td>
+<td>Hopperclouds2014</td>
+<td>192.168.0.86</td>
+<td>192.168.1.x</td>
+</tr>
+<tr>
+<td>Pinbot-OP</td>
+<td>Hopperclouds2016</td>
+<td>192.168.0.88</td>
+<td>192.168.3.x</td>
+</tr>
+<tr>
+<td>Pinbot-RD</td>
+<td>Hopperclouds2016</td>
+<td>192.168.0.89</td>
+<td>192.168.2.x</td>
+</tr>
+<tr>
+<td>Pinbot-dev</td>
+<td>Hopperclouds2016</td>
+<td>192.168.0.87</td>
+<td>192.168.4.x</td>
+</tr>
+</tbody>
+</table>
+<p>注：Pinbot-Pro 公用，Pinbot_OP用于顾问团队，Pinbot_RD、Pinbot-dev用于研发</p>
+<h3 id="14">1.4 公共网络信息<a class="headerlink" href="#14" title="Permanent link">&para;</a></h3>
+<p>公网IP地址：<a href="http://61.139.78.89">http://61.139.78.89</a></p>
+<h3 id="15_wifi">1.5 移动WIFI信息<a class="headerlink" href="#15_wifi" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>无线名</th>
+<th>密码</th>
+<th>管理后台</th>
+<th>用户名</th>
+<th>密码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pinbot-SOS-1</td>
+<td>pinbot123</td>
+<td>192.168.0.1</td>
+<td>admin</td>
+<td>admin</td>
+</tr>
+<tr>
+<td>Pinbot-SOS-2</td>
+<td>pinbot123</td>
+<td>192.168.5.1</td>
+<td>admin</td>
+<td>admin</td>
+</tr>
+<tr>
+<td>Pinbot-SOS-3</td>
+<td>pinbot123</td>
+<td>192.168.6.1</td>
+<td>admin</td>
+<td>admin</td>
+</tr>
+<tr>
+<td>Pinbot-SOS-4</td>
+<td>pinbot123</td>
+<td>192.168.7.1</td>
+<td>admin</td>
+<td>admin</td>
+</tr>
+<tr>
+<td>Pinbot-SOS-5</td>
+<td>pinbot123</td>
+<td>192.168.8.1</td>
+<td>admin</td>
+<td>admin</td>
+</tr>
+</tbody>
+</table>
+<h3 id="16">1.6 各账号、设备信息<a class="headerlink" href="#16" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>设备/线路</th>
+<th>账号</th>
+<th>信息</th>
+<th>密码</th>
+<th>使用情况</th>
+<th>紧急联系方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>商务光纤</td>
+<td>744000023613</td>
+<td>30M(固定IP)</td>
+<td></td>
+<td>部分有线、部分无线</td>
+<td>17729839890</td>
+</tr>
+<tr>
+<td>拨号宽带</td>
+<td>83330727</td>
+<td>100M(拨号IP）</td>
+<td>83330727</td>
+<td>部分有线、部分无线</td>
+<td>18030417167、10000</td>
+</tr>
+<tr>
+<td>专业路由器</td>
+<td>admin</td>
+<td>MikroTik-RouterOS</td>
+<td></td>
+<td>30M-&gt;ether8、100M-&gt;ether6</td>
+<td></td>
+</tr>
+<tr>
+<td>飞鱼星路由器</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="17_wifi">1.7 移动WIFI设置信息<a class="headerlink" href="#17_wifi" title="Permanent link">&para;</a></h3>
+<p><img alt="Alt text" src="../images/wifi_set.png" /></p>
+<p>移动WIFI测速信息：<br />
+<img alt="Alt text" src="../images/wifi_speed.png" /></p>
+<p><img alt="Alt text" src="../images/wifi_all.png" /></p>
+<p>网络故故障等级排查及解决方法</p>
+<h2 id="2">2 网络卡顿、延时等情况<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<h3 id="21">2.1 网络检查<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
+<p>1） 进入总路由后台管理系统（windows系统），浏览器直接进入<br />
+后台管理地址：<a href="http://61.139.78.89">http://61.139.78.89</a><br />
+<a href="http://192.168.0.1">http://192.168.0.1</a>  </p>
+<p><img alt="Alt text" src="../images/network_Login.png" /></p>
+<p>2） 检查网络流量情况：
+进入系统后选择 Interfaces
+<img alt="Alt text" src="../images/network_Interfaces.png" />
+其中ether8属于办公及内网服务器访问30M光纤产生的流量Tx下载(发送)总流量，Rx上传(接收)总流量<br />
+ether6（pppoe-out1）属于办公及内网服务器访问100M拨号专线产生的流量</p>
+<h3 id="22">2.2 故障分析<a class="headerlink" href="#22" title="Permanent link">&para;</a></h3>
+<p>1） 如果上传或者下载总流量单位以bps为单位时，表示总流量很小；<br />
+2） 当流量大于100M时断定为网络风暴（内网机器磁盘、网卡损坏）；<br />
+3） 对两个路由器进行单一插拔线路排除，确定内网故障机器；<br />
+4） 找到内网故障机器，检查机器磁盘、网卡情况；  </p>
+<h2 id="3_5-10">3 部分或者全部电脑5-10分钟断网<a class="headerlink" href="#3_5-10" title="Permanent link">&para;</a></h2>
+<h3 id="31">3.1 网络连接设置检查<a class="headerlink" href="#31" title="Permanent link">&para;</a></h3>
+<p>针对部分电脑检查网络IP是否冲突；<br />
+打开电脑右下方任务栏网络图标——&gt;选择网络共享中心<br />
+<img alt="Alt text" src="../images/network_tasks.png" /></p>
+<p>——&gt;更改适配器设置<br />
+<img alt="Alt text" src="../images/network_adapter.png" /></p>
+<p>——&gt;选择本地连接<br />
+<img alt="Alt text" src="../images/network_local.png" /></p>
+<p>——&gt;右键——&gt;选择属性——&gt;选择Internet 协议版本4（TCP/IPv4）<br />
+<img alt="Alt text" src="../images/network_local2.png" /></p>
+<p>——&gt;属性——&gt;检查是否为自动获取<br />
+<img alt="Alt text" src="../images/IPv4.png" /></p>
+<h3 id="32">3.2 故障解决方法<a class="headerlink" href="#32" title="Permanent link">&para;</a></h3>
+<h4 id="321">3.2.1 软件配置问题<a class="headerlink" href="#321" title="Permanent link">&para;</a></h4>
+<p>1） 进入总路由后台管理系统（windows系统），浏览器直接进入<br />
+后台管理地址：<a href="http://61.139.78.89">http://61.139.78.89</a><br />
+<a href="http://192.168.0.1">http://192.168.0.1</a>  </p>
+<p>2） 软件备份恢复：<br />
+进入管理系统后
+<img alt="Alt text" src="../images/network_Interfaces.png" />
+选择左边 Files ——&gt;选择File Name为 MikroTik-20160430-1657.backup的文件
+<img alt="Alt text" src="../images/network_Files.png" />
+——&gt;选择 Restore   进行正确的网络备份恢复
+<img alt="Alt text" src="../images/network_Restore.png" /></p>
+<p>注：恢复期间，路由器会重新设置为网络备份的设置，也会重启交换机是配置生效，时间大概5-10分钟左右</p>
+<h2 id="4_10">4 全部电脑断网超过10分钟<a class="headerlink" href="#4_10" title="Permanent link">&para;</a></h2>
+<p>注：此时如果按照鼓故障等级2的处理方法也没网时，短时间内难以恢复，需要启动应急方案；</p>
+<h3 id="41">4.1 应急方案一（电信网络都有问题）：<a class="headerlink" href="#41" title="Permanent link">&para;</a></h3>
+<p>1) 将启用5个移动WIFI（目前有一个，后续会增加到5个，单个设备最大支持数为10，检测速度为997K/S）;<br />
+2) 所有台式电脑安装无线网卡，网卡自带驱动;<br />
+3) 连接移动WIFI共享出来的无线网络;  </p>
+<p>注：刘毅、nina、慧琳的电脑在使用时需要先弹出CD/TP-Link网卡驱动，然后会再重装；</p>
+<h3 id="42">4.2 应急方案二（电信网络正常，只是交换机硬件故障）：<a class="headerlink" href="#42" title="Permanent link">&para;</a></h3>
+<p>1) 将网络入口直接接入两个企业路由器进行无线共享；<br />
+2) 所有台式电脑安装无线网卡，网卡自带驱动<br />
+3) 连接共享出来的无线网络  </p>
+<p>注：可根据网络情况，实时增加移动WIFI设备</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../jenkins/" class="btn btn-neutral float-right" title="Jenkins部署使用">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../vps/" class="btn btn-neutral" title="VPS使用"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../vps/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../jenkins/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

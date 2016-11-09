@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="liudong">
+  
+  <title>VPN部署使用 - Pinbot 运维</title>
+  
+
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "VPN部署使用";
+    var mkdocs_page_input_path = "openvpn.md";
+    var mkdocs_page_url = "/openvpn/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-36723568-3', 'mkdocs.org');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Pinbot 运维</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../operation/">运维相关</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../seafile/">Seafile私有云使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../gitUse/">Gitlab使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">VPN部署使用</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#openvpn">OpenVPN使用</a></li>
+                
+                    <li><a class="toctree-l4" href="#1_openvpn_mac">1 OpenVPN 客户端部署(MAC)</a></li>
+                
+                    <li><a class="toctree-l4" href="#2_openvpn_ubuntu">2 OpenVPN 客户端部署(Ubuntu)</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../vps/">VPS使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../network/">网络手册</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../jenkins/">Jenkins部署使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../gitlab/">Gitlab部署</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../zabbix/">Zabbix使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../address/">常用地址</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../clusters/">集群部署</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../daily/">日常笔记</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Pinbot 运维</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>VPN部署使用</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="openvpn">OpenVPN使用<a class="headerlink" href="#openvpn" title="Permanent link">&para;</a></h1>
+<div class="toc">
+<ul>
+<li><a href="#openvpn">OpenVPN使用</a><ul>
+<li><a href="#1_openvpn_mac">1 OpenVPN 客户端部署(MAC)</a><ul>
+<li><a href="#11_openvpn">1.1 安装OpenVPN 所需插件：</a></li>
+<li><a href="#12_openvpn">1.2 安装OpenVPN:</a></li>
+<li><a href="#13">1.3 服务端生成客户端所需密钥(客户端部署可忽略此步骤)</a><ul>
+<li><a href="#131">1.3.1 服务端连接</a></li>
+<li><a href="#132">1.3.2 生成密钥</a></li>
+<li><a href="#133">1.3.3设置客户端密钥验证信息</a></li>
+</ul>
+</li>
+<li><a href="#14">1.4 客户端配置：</a><ul>
+<li><a href="#141">1.4.1 拷贝密钥到客户端</a></li>
+<li><a href="#142">1.4.2 配置客户端密码文件</a></li>
+<li><a href="#143">1.4.3 客户端配置文件</a></li>
+</ul>
+</li>
+<li><a href="#15">1.5 启动客户端：</a><ul>
+<li><a href="#151_openvpn">1.5.1 命令行启动OpenVPN</a></li>
+<li><a href="#152_guiopenvpn">1.5.2 GUI启动OpenVPN</a></li>
+<li><a href="#16">1.6 检查验证：</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#2_openvpn_ubuntu">2 OpenVPN 客户端部署(Ubuntu)</a><ul>
+<li><a href="#21_openvpn">2.1 安装OpenVPN 所需插件：</a></li>
+<li><a href="#22_openvpn222">2.2 下载OpenVPN源码（建议使用2.2.2版本）：</a></li>
+<li><a href="#23">2.3 服务端生成客户端所需密钥(客户端部署可忽略此步骤)</a><ul>
+<li><a href="#231">2.3.1 服务端连接</a></li>
+<li><a href="#232">2.3.2 生成密钥</a></li>
+<li><a href="#233">2.3.3设置客户端密钥验证信息</a></li>
+</ul>
+</li>
+<li><a href="#24">2.4 客户端配置：</a><ul>
+<li><a href="#241">2.4.1 拷贝密钥到客户端</a></li>
+<li><a href="#242">2.4.2 配置客户端密码文件</a></li>
+<li><a href="#243">2.4.3 客户端配置文件</a></li>
+</ul>
+</li>
+<li><a href="#25">2.5 启动客户端：</a><ul>
+<li><a href="#26">2.6 检查验证：</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="1_openvpn_mac">1 OpenVPN 客户端部署(MAC)<a class="headerlink" href="#1_openvpn_mac" title="Permanent link">&para;</a></h2>
+<h3 id="11_openvpn">1.1 安装OpenVPN 所需插件：<a class="headerlink" href="#11_openvpn" title="Permanent link">&para;</a></h3>
+<pre><code>$ sudo brew install openssl
+</code></pre>
+
+<h3 id="12_openvpn">1.2 安装OpenVPN:<a class="headerlink" href="#12_openvpn" title="Permanent link">&para;</a></h3>
+<pre><code>直接brew安装(推荐)
+$brew install openvpn
+$cd /usr/local/Cellar/openvpn/2.3.11_1
+$mkdir conf log
+$ln -s /usr/local/Cellar/openvpn/2.3.11_1/sbin/openvpn /usr/local/bin/openvpn
+
+源码安装（建议使用2.2.2版本）：
+$ wget http://swupdate.openvpn.org/community/releases/openvpn-2.2.2.tar.gz  
+$ tar -zxvf openvpn-2.2.2.tar.gz  
+$ mkdir /data/openvpn &amp;&amp; cd openvpn-2.2.2  
+$ ./configure --enable-password-save --prefix=/data/openvpn  
+$ make &amp;&amp; sudo make install  
+
+</code></pre>
+
+<p>注：&ndash;enable-password-save该选项是避免手工输入客户端密码；&ndash;prefix选项是真正的安装路径</p>
+<h3 id="13">1.3 服务端生成客户端所需密钥(客户端部署可忽略此步骤)<a class="headerlink" href="#13" title="Permanent link">&para;</a></h3>
+<h4 id="131">1.3.1 服务端连接<a class="headerlink" href="#131" title="Permanent link">&para;</a></h4>
+<pre><code>服务端所在机器：112.124.4.196  
+$ssh root@112.124.4.196  #连接方式
+$cd /media/openvpn/  服务端所在路径
+$cd /media/openvpn-2.2.2/easy-rsa/2.0  生成密钥所需路径
+</code></pre>
+
+<h4 id="132">1.3.2 生成密钥<a class="headerlink" href="#132" title="Permanent link">&para;</a></h4>
+<pre><code>$ source ./vars  
+$ ./build-key-pass liuding    #此处设置密码为：qwer@123  
+</code></pre>
+
+<p>注：生成客户端key，pass表示需要输入一个密码作为客户端启动时的凭证； ./build-key则不需要输入密码  </p>
+<pre><code>$ ./build-dh  
+</code></pre>
+
+<h4 id="133">1.3.3设置客户端密钥验证信息<a class="headerlink" href="#133" title="Permanent link">&para;</a></h4>
+<pre><code>$ vim /media/openvpn/conf/ccd/liudong  
+ifconfig-push 10.8.0.119 255.255.255.0  
+</code></pre>
+
+<p>注：此处的验证信息文件名需要和生成密钥时输入的名字保持一致;<br />
+10.8.0.119 指客户端被虚拟出来的IP  </p>
+<h3 id="14">1.4 客户端配置：<a class="headerlink" href="#14" title="Permanent link">&para;</a></h3>
+<h4 id="141">1.4.1 拷贝密钥到客户端<a class="headerlink" href="#141" title="Permanent link">&para;</a></h4>
+<pre><code>$scp root@112.124.4.196:/media/openvpn-2.2.2/easy-rsa/2.0/keys/{ca.crt,ca.key,liudong.crt,liudong.csr,liudong.key}   /usr/local/Cellar/openvpn/2.3.11_1/conf/
+
+注:密钥可以由维护人员发放,联系刘东;
+</code></pre>
+
+<h4 id="142">1.4.2 配置客户端密码文件<a class="headerlink" href="#142" title="Permanent link">&para;</a></h4>
+<pre><code>$ vim /usr/local/Cellar/openvpn/2.3.11_1/conf/password.txt  
+qwer@123  
+</code></pre>
+
+<p>注:客户端密码文件和服务端生成密钥时输入的密码一致</p>
+<h4 id="143">1.4.3 客户端配置文件<a class="headerlink" href="#143" title="Permanent link">&para;</a></h4>
+<pre><code>$ vim /usr/local/Cellar/openvpn/2.3.11_1/conf/client.conf  
+client  
+dev tap  
+proto tcp  
+
+remote 112.124.4.196 1194   #指定服务端外网IP及端口
+
+nobind  
+
+user nobody  
+group nogroup  
+ca /usr/local/Cellar/openvpn/2.3.11_1/conf/ca.crt  
+cert /usr/local/Cellar/openvpn/2.3.11_1/conf/liudong.crt  
+key /usr/local/Cellar/openvpn/2.3.11_1/conf/liudong.key  
+
+ping 15  
+
+ping-restart 45  
+ping-timer-rem  
+persist-key  
+persist-tun  
+ns-cert-type server  
+comp-lzo  
+
+verb 4  
+log-append /usr/local/Cellar/openvpn/2.3.11_1/log/openvpn.log  
+status /usr/local/Cellar/openvpn/2.3.11_1/log/openvpn-status.log  
+
+tcp-queue-limit 4096 # 256  
+bcast-buffers 4096  
+</code></pre>
+
+<h3 id="15">1.5 启动客户端：<a class="headerlink" href="#15" title="Permanent link">&para;</a></h3>
+<h4 id="151_openvpn">1.5.1 命令行启动OpenVPN<a class="headerlink" href="#151_openvpn" title="Permanent link">&para;</a></h4>
+<pre><code>$ sudo /data/openvpn/sbin/openvpn --config /usr/local/Cellar/openvpn/2.3.11_1/conf/client.conf --askpass /usr/local/Cellar/openvpn/2.3.11_1/conf/password.txt --daemon  
+</code></pre>
+
+<h4 id="152_guiopenvpn">1.5.2 GUI启动OpenVPN<a class="headerlink" href="#152_guiopenvpn" title="Permanent link">&para;</a></h4>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+安装Tunnelblick客户端<br />
+获得方式:<br />
+<em> seafile 中的开发环境安装包下载Tunnelblick客户端<br />
+</em> 直接官网<a href="https://tunnelblick.net/downloads.html">https://tunnelblick.net/downloads.html</a>下载<br />
+具体安装流程见<a href="http://blog.csdn.net/sinat_25471067/article/details/43482837"> Mac系统Tunnelblick下载以及安装流程</a><br />
+=======
+安装Tunnelblick客户端
+获得方式:
+<em> seafile 中的开发环境安装包下载Tunnelblick客户端
+</em> 直接官网<a href="https://tunnelblick.net/downloads.html">https://tunnelblick.net/downloads.html</a>下载
+具体安装流程见<a href="http://blog.csdn.net/sinat_25471067/article/details/43482837"> Mac系统Tunnelblick下载以及安装流程</a></p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>3b32a5e0c6b27daab9c08605f19a93ad58f8a7b0</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<h4 id="16">1.6 检查验证：<a class="headerlink" href="#16" title="Permanent link">&para;</a></h4>
+<pre><code>$ ifconfig|grep inet|grep 10.8.0.119  
+inet 10.8.0.119 netmask 0xffffff00 broadcast 10.8.0.255  
+</code></pre>
+
+<p>注：得到以下信息则说明VPN配置成功  </p>
+<pre><code>$ ping 10.8.0.1  
+</code></pre>
+
+<p>检查是否能ping通内网等机器</p>
+<h2 id="2_openvpn_ubuntu">2 OpenVPN 客户端部署(Ubuntu)<a class="headerlink" href="#2_openvpn_ubuntu" title="Permanent link">&para;</a></h2>
+<h3 id="21_openvpn">2.1 安装OpenVPN 所需插件：<a class="headerlink" href="#21_openvpn" title="Permanent link">&para;</a></h3>
+<pre><code>$ sudo apt-get install openssl
+$ sudo apt-get install libssl-dev
+$ sudo apt-get install libpam0g-dev
+$ sudo apt-get install liblzo2-dev
+</code></pre>
+
+<h3 id="22_openvpn222">2.2 下载OpenVPN源码（建议使用2.2.2版本）：<a class="headerlink" href="#22_openvpn222" title="Permanent link">&para;</a></h3>
+<pre><code>$ wget http://swupdate.openvpn.org/community/releases/openvpn-2.2.2.tar.gz  
+$ tar -zxvf openvpn-2.2.2.tar.gz  
+$ mkdir /data/openvpn &amp;&amp; cd openvpn-2.2.2  
+$ ./configure --enable-password-save --prefix=/data/openvpn  
+$ make &amp;&amp; sudo make install  
+</code></pre>
+
+<p>注：&ndash;enable-password-save该选项是避免手工输入客户端密码；&ndash;prefix选项是真正的安装路径</p>
+<h3 id="23">2.3 服务端生成客户端所需密钥(客户端部署可忽略此步骤)<a class="headerlink" href="#23" title="Permanent link">&para;</a></h3>
+<h4 id="231">2.3.1 服务端连接<a class="headerlink" href="#231" title="Permanent link">&para;</a></h4>
+<pre><code>服务端所在机器：112.124.4.196  
+$ssh root@112.124.4.196  #连接方式
+$cd /media/openvpn/  服务端所在路径
+$cd /media/openvpn-2.2.2/easy-rsa/2.0  生成密钥所需路径
+</code></pre>
+
+<h4 id="232">2.3.2 生成密钥<a class="headerlink" href="#232" title="Permanent link">&para;</a></h4>
+<pre><code>$ source ./vars  
+$ ./build-key-pass liuding    #此处设置密码为：qwer@123  
+</code></pre>
+
+<p>注：生成客户端key，pass表示需要输入一个密码作为客户端启动时的凭证； ./build-key则不需要输入密码  </p>
+<pre><code>$ ./build-dh  
+</code></pre>
+
+<h4 id="233">2.3.3设置客户端密钥验证信息<a class="headerlink" href="#233" title="Permanent link">&para;</a></h4>
+<pre><code>$ vim /media/openvpn/conf/ccd/liudong  
+ifconfig-push 10.8.0.119 255.255.255.0  
+</code></pre>
+
+<p>注：此处的验证信息文件名需要和生成密钥时输入的名字保持一致;<br />
+10.8.0.119 指客户端被虚拟出来的IP  </p>
+<h3 id="24">2.4 客户端配置：<a class="headerlink" href="#24" title="Permanent link">&para;</a></h3>
+<h4 id="241">2.4.1 拷贝密钥到客户端<a class="headerlink" href="#241" title="Permanent link">&para;</a></h4>
+<pre><code>$scp root@112.124.4.196:/media/openvpn-2.2.2/easy-rsa/2.0/keys/{ca.crt,ca.key,liudong.crt,liudong.csr,liudong.key}   /usr/local/Cellar/openvpn/2.3.11_1/conf/
+
+注:密钥可以由维护人员发放,联系刘东;
+</code></pre>
+
+<h4 id="242">2.4.2 配置客户端密码文件<a class="headerlink" href="#242" title="Permanent link">&para;</a></h4>
+<pre><code>$ vim /usr/local/Cellar/openvpn/2.3.11_1/conf/password.txt  
+qwer@123
+</code></pre>
+
+<p>注:客户端密码文件和服务端生成密钥时输入的密码一致</p>
+<h4 id="243">2.4.3 客户端配置文件<a class="headerlink" href="#243" title="Permanent link">&para;</a></h4>
+<pre><code>$ vim /usr/local/Cellar/openvpn/2.3.11_1/conf/client.conf  
+client  
+dev tap  
+proto tcp  
+
+remote 112.124.4.196 1194   #指定服务端外网IP及端口
+
+nobind  
+
+user nobody  
+group nogroup  
+ca /usr/local/Cellar/openvpn/2.3.11_1/conf/ca.crt  
+cert /usr/local/Cellar/openvpn/2.3.11_1/conf/liudong.crt  
+key /usr/local/Cellar/openvpn/2.3.11_1/conf/liudong.key  
+
+ping 15  
+
+ping-restart 45  
+ping-timer-rem  
+persist-key  
+persist-tun  
+ns-cert-type server  
+comp-lzo  
+
+verb 4  
+log-append /usr/local/Cellar/openvpn/2.3.11_1/log/openvpn.log  
+status /usr/local/Cellar/openvpn/2.3.11_1/log/openvpn-status.log  
+
+tcp-queue-limit 4096 # 256  
+bcast-buffers 4096  
+</code></pre>
+
+<h3 id="25">2.5 启动客户端：<a class="headerlink" href="#25" title="Permanent link">&para;</a></h3>
+<pre><code>$ sudo /data/openvpn/sbin/openvpn --config /usr/local/Cellar/openvpn/2.3.11_1/conf/client.conf --askpass /usr/local/Cellar/openvpn/2.3.11_1/conf/password.txt --daemon  
+</code></pre>
+
+<h4 id="26">2.6 检查验证：<a class="headerlink" href="#26" title="Permanent link">&para;</a></h4>
+<pre><code>$ ifconfig|grep inet|grep 10.8.0.119  
+inet 10.8.0.119 netmask 0xffffff00 broadcast 10.8.0.255  
+</code></pre>
+
+<p>注：得到以下信息则说明VPN配置成功  </p>
+<pre><code>$ ping 10.8.0.1  
+</code></pre>
+
+<p>检查是否能ping通内网等机器</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../vps/" class="btn btn-neutral float-right" title="VPS使用">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../gitUse/" class="btn btn-neutral" title="Gitlab使用"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../gitUse/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../vps/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

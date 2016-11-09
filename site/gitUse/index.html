@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="liudong">
+  
+  <title>Gitlab使用 - Pinbot 运维</title>
+  
+
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Gitlab使用";
+    var mkdocs_page_input_path = "gitUse.md";
+    var mkdocs_page_url = "/gitUse/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-36723568-3', 'mkdocs.org');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Pinbot 运维</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../operation/">运维相关</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../seafile/">Seafile私有云使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Gitlab使用</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#gitlab">开源版本系统Gitlab使用</a></li>
+                
+                    <li><a class="toctree-l4" href="#1_gitlab">1. Gitlab信息</a></li>
+                
+                    <li><a class="toctree-l4" href="#2_gitlab">2. Gitlab使用指引</a></li>
+                
+                    <li><a class="toctree-l4" href="#3_gitlab">3. Gitlab新建项目</a></li>
+                
+                    <li><a class="toctree-l4" href="#4_gitlab_fork">4. Gitlab Fork项目</a></li>
+                
+                    <li><a class="toctree-l4" href="#5_clonelinux">5. Clone项目到Linux机器</a></li>
+                
+                    <li><a class="toctree-l4" href="#6_linuxgitlabgithub">6. Linux机器中使用gitlab(和github命令一致)</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../openvpn/">VPN部署使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../vps/">VPS使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../network/">网络手册</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../jenkins/">Jenkins部署使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../gitlab/">Gitlab部署</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../zabbix/">Zabbix使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../address/">常用地址</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../clusters/">集群部署</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../daily/">日常笔记</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Pinbot 运维</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Gitlab使用</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="gitlab">开源版本系统Gitlab使用<a class="headerlink" href="#gitlab" title="Permanent link">&para;</a></h1>
+<div class="toc">
+<ul>
+<li><a href="#gitlab">开源版本系统Gitlab使用</a><ul>
+<li><a href="#1_gitlab">1. Gitlab信息</a></li>
+<li><a href="#2_gitlab">2. Gitlab使用指引</a></li>
+<li><a href="#3_gitlab">3. Gitlab新建项目</a></li>
+<li><a href="#4_gitlab_fork">4. Gitlab Fork项目</a></li>
+<li><a href="#5_clonelinux">5. Clone项目到Linux机器</a></li>
+<li><a href="#6_linuxgitlabgithub">6. Linux机器中使用gitlab(和github命令一致)</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="1_gitlab">1. Gitlab信息<a class="headerlink" href="#1_gitlab" title="Permanent link">&para;</a></h2>
+<p>访问地址：<a href="http://gitlab.pinbot.me/">http://gitlab.pinbot.me/</a></p>
+<p>账号：研发组每人对应的拼音名<br />
+密码：qwer@123</p>
+<p>账号登录：
+<img alt="Alt text" src="../images/gitlab_sign_in.png" /></p>
+<h2 id="2_gitlab">2. Gitlab使用指引<a class="headerlink" href="#2_gitlab" title="Permanent link">&para;</a></h2>
+<p>gitlab主界面：
+<img alt="Alt text" src="../images/gitlab_master.png" /></p>
+<p>gitlab个人设置：
+<img alt="Alt text" src="../images/gitlab_profile_settings.png" /></p>
+<p>修改密码：
+<img alt="Alt text" src="../images/gitlab_modify_passwd.png" /></p>
+<p>查看本机SSH-key：
+<img alt="Alt text" src="../images/gitlab_cat_sshKey.png" /></p>
+<p>gitlab SSH-key 设置：
+<img alt="Alt text" src="../images/gitlab_sshkey_settings.png" /></p>
+<p>SSH-key添加：
+<img alt="Alt text" src="../images/gitlab_sshkey_add.png" /></p>
+<p>添加完成界面：
+<img alt="Alt text" src="../images/gitlab_sshkey_addfinal.png" /></p>
+<h2 id="3_gitlab">3. Gitlab新建项目<a class="headerlink" href="#3_gitlab" title="Permanent link">&para;</a></h2>
+<p>项目设置：
+<img alt="Alt text" src="../images/gitlab_project_setting.png" /></p>
+<p>进入新建项目：
+<img alt="Alt text" src="../images/gitlab_project_new.png" /></p>
+<p>新建项目设置：
+<img alt="Alt text" src="../images/gitlab_project_netfinal.png" /></p>
+<p>注：新建项目必须有内容才能Fork，例如：添加README.md</p>
+<h2 id="4_gitlab_fork">4. Gitlab Fork项目<a class="headerlink" href="#4_gitlab_fork" title="Permanent link">&para;</a></h2>
+<p>选择需要fork的项目并进入：
+<img alt="Alt text" src="../images/gitlab_project_fork1.png" /></p>
+<p>选择fork：
+<img alt="Alt text" src="../images/gitlab_project_fork2.png" /></p>
+<p>选择需要fork此项目的用户：
+<img alt="Alt text" src="../images/gitlab_project_fork3.png" /></p>
+<p>正在fork项目中：
+<img alt="Alt text" src="../images/gitlab_project_fork4.png" /></p>
+<p>项目已经fork成功到用户中:
+<img alt="Alt text" src="../images/gitlab_project_fork5.png" /></p>
+<p>查看用户下的项目：
+<img alt="Alt text" src="../images/gitlab_project_fork6.png" /></p>
+<h2 id="5_clonelinux">5. Clone项目到Linux机器<a class="headerlink" href="#5_clonelinux" title="Permanent link">&para;</a></h2>
+<p>进入项目并复制git链接：
+<img alt="Alt text" src="../images/gitlab_project_fork7.png" /></p>
+<p>在Linux机器clone此项目:
+<img alt="Alt text" src="../images/gitlab_project_fork8.png" /></p>
+<p>查看项目分支及状态：
+<img alt="Alt text" src="../images/gitlab_project_fork9.png" /></p>
+<h2 id="6_linuxgitlabgithub">6. Linux机器中使用gitlab(和github命令一致)<a class="headerlink" href="#6_linuxgitlabgithub" title="Permanent link">&para;</a></h2>
+<p>查看git分支及状态：
+<img alt="Alt text" src="../images/gitlab_linux_remote.png" /></p>
+<p>添加修改并提交：
+<img alt="Alt text" src="../images/gitlab_linux_add.png" /></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../openvpn/" class="btn btn-neutral float-right" title="VPN部署使用">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../seafile/" class="btn btn-neutral" title="Seafile私有云使用"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../seafile/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../openvpn/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

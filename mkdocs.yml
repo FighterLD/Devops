@@ -1,0 +1,30 @@
+site_name: Pinbot 运维
+markdown_extensions:
+    - toc:
+        permalink: True
+        separator: "_"
+    - smarty
+theme: readthedocs
+site_url: https://gitlab.pinbot.me/FighterLD/Devops.git
+repo_url: https://gitlab.pinbot.me/FighterLD/Devops.git
+site_description: 好玩运维UP UP UP
+site_favicon: favicon.ico
+google_analytics: ['UA-36723568-3', 'mkdocs.org']
+site_author: liudong
+extra:
+    version: 0.0.1
+pages:
+- Home: 'index.md'
+- 运维相关: 'operation.md'
+- Seafile私有云使用: 'seafile.md'
+- Gitlab使用: 'gitUse.md'
+- VPN部署使用: 'openvpn.md'
+- VPS使用: 'vps.md'
+- Docker笔记: 'docker.md'
+- 网络手册: 'network.md'
+- Jenkins部署使用: 'jenkins.md'
+- Gitlab部署: 'gitlab.md'
+- Zabbix使用: 'zabbix.md'
+- 常用地址: 'address.md'
+- 集群部署: 'clusters.md'
+- 日常笔记: 'daily.md'

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="liudong">
+  
+  <title>Jenkins部署使用 - Pinbot 运维</title>
+  
+
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Jenkins部署使用";
+    var mkdocs_page_input_path = "jenkins.md";
+    var mkdocs_page_url = "/jenkins/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-36723568-3', 'mkdocs.org');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Pinbot 运维</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../operation/">运维相关</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../seafile/">Seafile私有云使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../gitUse/">Gitlab使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../openvpn/">VPN部署使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../vps/">VPS使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../network/">网络手册</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Jenkins部署使用</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#jenkinslinuxubuntu">Jenkins持续集成服务器配置Linux(Ubuntu)</a></li>
+                
+                    <li><a class="toctree-l4" href="#_1">持续集成使用阶段主要步骤</a></li>
+                
+                    <li><a class="toctree-l4" href="#1_jdk">1 安装JDK</a></li>
+                
+                    <li><a class="toctree-l4" href="#2_jenkins">2 安装Jenkins</a></li>
+                
+                    <li><a class="toctree-l4" href="#3_jenkins">3 Jenkins默认安装位置</a></li>
+                
+                    <li><a class="toctree-l4" href="#4_jenkins">4 Jenkins服务启动、停止方法</a></li>
+                
+                    <li><a class="toctree-l4" href="#5_jenkins">5 访问Jenkins：</a></li>
+                
+                    <li><a class="toctree-l4" href="#6_jenkins_plugins">6 安装Jenkins plugins：</a></li>
+                
+                    <li><a class="toctree-l4" href="#7">7 账号安全配置</a></li>
+                
+                    <li><a class="toctree-l4" href="#8">8 环境变量设置</a></li>
+                
+                    <li><a class="toctree-l4" href="#9_jenkins">9 Jenkins使用</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../gitlab/">Gitlab部署</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../zabbix/">Zabbix使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../address/">常用地址</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../clusters/">集群部署</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../daily/">日常笔记</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Pinbot 运维</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Jenkins部署使用</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="jenkinslinuxubuntu">Jenkins持续集成服务器配置Linux(Ubuntu)<a class="headerlink" href="#jenkinslinuxubuntu" title="Permanent link">&para;</a></h1>
+<div class="toc">
+<ul>
+<li><a href="#jenkinslinuxubuntu">Jenkins持续集成服务器配置Linux(Ubuntu)</a><ul>
+<li><a href="#_1">持续集成使用阶段主要步骤</a></li>
+<li><a href="#1_jdk">1 安装JDK</a></li>
+<li><a href="#2_jenkins">2 安装Jenkins</a></li>
+<li><a href="#3_jenkins">3 Jenkins默认安装位置</a></li>
+<li><a href="#4_jenkins">4 Jenkins服务启动、停止方法</a></li>
+<li><a href="#5_jenkins">5 访问Jenkins：</a></li>
+<li><a href="#6_jenkins_plugins">6 安装Jenkins plugins：</a><ul>
+<li><a href="#61">6.1 进入系统管理</a></li>
+<li><a href="#62">6.2 选择插件管理</a></li>
+<li><a href="#63">6.3 切换到可选插件</a></li>
+<li><a href="#64">6.4 选择插件直接安装</a></li>
+</ul>
+</li>
+<li><a href="#7">7 账号安全配置</a><ul>
+<li><a href="#71">7.1 配置全局安全认证</a></li>
+<li><a href="#72_jenkins">7.2 选择Jenkins专用用户数据库，允许用户注册</a></li>
+<li><a href="#73">7.3 注册用户</a></li>
+<li><a href="#74">7.4 启动安全矩阵，添加用户、权限</a></li>
+</ul>
+</li>
+<li><a href="#8">8 环境变量设置</a></li>
+<li><a href="#9_jenkins">9 Jenkins使用</a><ul>
+<li><a href="#91">9.1 创建项目</a></li>
+<li><a href="#92">9.2 项目构建</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="_1">持续集成使用阶段主要步骤<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<blockquote>
+<ul>
+<li>程序员从源代码仓库下载最新程序</li>
+<li>程序员编写代码、测试用例，并提交更新结果给版本控制仓库</li>
+<li>CI服务器根据触发条件，从版本控制仓库提取最新代码，交给构建工具的工作空间</li>
+<li>构建工具对代码进行编译、测试，并进行打包。如有必要，实现产品部署、发布</li>
+<li>通过构建工具与版本控制工具的配合，实现产品版本控制与管理</li>
+<li>建立、管理项目开发的工作网站</li>
+</ul>
+</blockquote>
+<h2 id="1_jdk">1 安装JDK<a class="headerlink" href="#1_jdk" title="Permanent link">&para;</a></h2>
+<pre><code>sudo apt-get install openjdk-8-jdk
+
+java -version   #查看是否安装java
+java version &quot;1.8.0_91&quot;
+Java(TM) SE Runtime Environment (build 1.8.0_91-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.91-b14, mixed mode)
+</code></pre>
+
+<h2 id="2_jenkins">2 安装Jenkins<a class="headerlink" href="#2_jenkins" title="Permanent link">&para;</a></h2>
+<pre><code>apt-get安装方式
+#添加Jenkins安装key
+wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -  
+#添加Jenkins安装源列表
+sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ &gt; /etc/apt/sources.list.d/jenkins.list' 
+sudo apt-get update
+sudo apt-get install jenkins  
+#直接把Jenkins当成服务安装，完成后访问：http://localhost:8080验证是否安装成功；
+</code></pre>
+
+<h2 id="3_jenkins">3 Jenkins默认安装位置<a class="headerlink" href="#3_jenkins" title="Permanent link">&para;</a></h2>
+<pre><code>安装目录：/var/lib/jenkins
+日志目录：/var/log/jenkins/jenkins.log
+</code></pre>
+
+<h2 id="4_jenkins">4 Jenkins服务启动、停止方法<a class="headerlink" href="#4_jenkins" title="Permanent link">&para;</a></h2>
+<pre><code>sudo /etc/init.d/jenkins start
+sudo /etc/init.d/jenkins stop
+</code></pre>
+
+<h2 id="5_jenkins">5 访问Jenkins：<a class="headerlink" href="#5_jenkins" title="Permanent link">&para;</a></h2>
+<pre><code>http://192.168.0.212:8080/
+</code></pre>
+
+<p><img alt="Alt text" src="../images/jenkins_sys_login.png" />
+<authorizationStrategy class="hudson.security.GlobalMatrixAuthorizationStrategy"/></p>
+<h2 id="6_jenkins_plugins">6 安装Jenkins plugins：<a class="headerlink" href="#6_jenkins_plugins" title="Permanent link">&para;</a></h2>
+<p>在线安装：</p>
+<h3 id="61">6.1 进入系统管理<a class="headerlink" href="#61" title="Permanent link">&para;</a></h3>
+<p><img alt="Alt text" src="../images/jenkins_sys_admin.png" /></p>
+<h3 id="62">6.2 选择插件管理<a class="headerlink" href="#62" title="Permanent link">&para;</a></h3>
+<p><img alt="Alt text" src="../images/jenkins_manage_plugins.png" /></p>
+<h3 id="63">6.3 切换到可选插件<a class="headerlink" href="#63" title="Permanent link">&para;</a></h3>
+<p><img alt="Alt text" src="../images/jenkins_choice_plugins.png" /></p>
+<h3 id="64">6.4 选择插件直接安装<a class="headerlink" href="#64" title="Permanent link">&para;</a></h3>
+<p><img alt="Alt text" src="../images/jenkins_install_plugins.png" /></p>
+<h2 id="7">7 账号安全配置<a class="headerlink" href="#7" title="Permanent link">&para;</a></h2>
+<h3 id="71">7.1 配置全局安全认证<a class="headerlink" href="#71" title="Permanent link">&para;</a></h3>
+<p><img alt="Alt text" src="../images/jenkins_sys_user.png" /></p>
+<h3 id="72_jenkins">7.2 选择Jenkins专用用户数据库，允许用户注册<a class="headerlink" href="#72_jenkins" title="Permanent link">&para;</a></h3>
+<p><img alt="Alt text" src="../images/jenkins_permit_regist.png" /></p>
+<h3 id="73">7.3 注册用户<a class="headerlink" href="#73" title="Permanent link">&para;</a></h3>
+<p><img alt="Alt text" src="../images/jenkins_user_registe.png" />
+<img alt="Alt text" src="../images/jenkins_user_sigin.png" /></p>
+<h3 id="74">7.4 启动安全矩阵，添加用户、权限<a class="headerlink" href="#74" title="Permanent link">&para;</a></h3>
+<p><img alt="Alt text" src="../images/jenkins_user_configure.png" /></p>
+<h2 id="8">8 环境变量设置<a class="headerlink" href="#8" title="Permanent link">&para;</a></h2>
+<p>环境变量列表:</p>
+<p>BUILD_NUMBER， 唯一标识一次build，例如23<br />
+BUILD_ID，基本上等同于BUILD_NUMBER，但是是字符串，例如2011-11-15_16-06-21&amp;&amp;据说新版本只有一个ID，具体大家自己尝试下；<br />
+JOB_NAME， job的名字，例如JavaHelloWorld；<br />
+BUILD_TAG，作用同BUILD_ID,BUILD_NUMBER,用来全局地唯一标识一此build，例如jenkins-JavaHelloWorld-23；<br />
+EXECUTOR_NUMBER， 例如0；<br />
+NODE_NAME，slave的名字，例如MyServer01；<br />
+NODE_LABELS，slave的label，标识slave的用处，例如JavaHelloWorldMyServer01；<br />
+JAVA_HOME， java的home目录，例如C:\Program Files (x86)\Java\jdk1.7.0_01；<br />
+WORKSPACE，job的当前工作目录，例如c:\jenkins\workspace\JavaHelloWorld；<br />
+HUDSON_URL = JENKINS_URL， jenkins的url，例如http://localhost:8000/；<br />
+BUILD_URL，build的url 例如http://localhost:8000/job/JavaHelloWorld/23/；<br />
+JOB_URL， job的url，例如http://localhost:8000/job/JavaHelloWorld/；<br />
+SVN_REVISION，svn 的revison， 例如4；<br />
+<img alt="Alt text" src="../images/jenkins_sys_variable.png" /></p>
+<h2 id="9_jenkins">9 Jenkins使用<a class="headerlink" href="#9_jenkins" title="Permanent link">&para;</a></h2>
+<h3 id="91">9.1 创建项目<a class="headerlink" href="#91" title="Permanent link">&para;</a></h3>
+<p>输入项目名称，选择项目类型
+<img alt="Alt text" src="../images/jenkins_sys_variable.png" />
+项目描述
+<img alt="Alt text" src="../images/jenkins_project_describe.png" /></p>
+<h3 id="92">9.2 项目构建<a class="headerlink" href="#92" title="Permanent link">&para;</a></h3>
+<p><img alt="Alt text" src="../images/jenkins_project_construct.png" />
+查看构建结果<br />
+<img alt="Alt text" src="../images/jenkins_construct_result.png" />
+构建结果显示<br />
+<img alt="Alt text" src="../images/jenkins_construct_display.png" /></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../gitlab/" class="btn btn-neutral float-right" title="Gitlab部署">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../network/" class="btn btn-neutral" title="网络手册"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../network/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../gitlab/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

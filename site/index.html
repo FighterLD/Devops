@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="好玩运维UP UP UP">
+  <meta name="author" content="liudong">
+  
+  <title>Pinbot 运维</title>
+  
+
+  <link rel="shortcut icon" href="favicon.ico">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="./css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="./css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="./css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "None";
+    var mkdocs_page_input_path = "index.md";
+    var mkdocs_page_url = "/";
+  </script>
+  
+  <script src="./js/jquery-2.1.1.min.js"></script>
+  <script src="./js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="./js/highlight.pack.js"></script>
+  <script src="./js/theme.js"></script> 
+
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-36723568-3', 'mkdocs.org');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> Pinbot 运维</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href=".">Home</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#python">Python语言基础</a></li>
+                
+                    <li><a class="toctree-l4" href="#1">1、环境搭建</a></li>
+                
+                    <li><a class="toctree-l4" href="#pydev">Pydev环境搭建</a></li>
+                
+                    <li><a class="toctree-l4" href="#2">2、基本操作</a></li>
+                
+                    <li><a class="toctree-l4" href="#_6">流程控制</a></li>
+                
+                    <li><a class="toctree-l4" href="#_7">高阶函数(函数式编程)</a></li>
+                
+                    <li><a class="toctree-l4" href="#3">3、类</a></li>
+                
+                    <li><a class="toctree-l4" href="#4all_in_one">4、All in One 完成一个复杂任务</a></li>
+                
+                    <li><a class="toctree-l4" href="#pydev_3">善用工具:pydev</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="operation/">运维相关</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="seafile/">Seafile私有云使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="gitUse/">Gitlab使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="openvpn/">VPN部署使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="vps/">VPS使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="network/">网络手册</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="jenkins/">Jenkins部署使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="gitlab/">Gitlab部署</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="zabbix/">Zabbix使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="address/">常用地址</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="clusters/">集群部署</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="daily/">日常笔记</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">Pinbot 运维</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Home</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="python">Python语言基础<a class="headerlink" href="#python" title="Permanent link">&para;</a></h1>
+<h2 id="1">1、环境搭建<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Python 2.7.*</li>
+<li>Mac or  Ubuntu Kylin</li>
+<li><a href="http://www.eclipse.org/downloads/">Eclipse IDE for Java Developers</a></li>
+<li><a href="http://www.pydev.org/download.html">Pydev</a> Last Site Update: 22 March 2016 | Latest Version: 4.5.5</li>
+</ul>
+<h3 id="python_1">Python环境搭建<a class="headerlink" href="#python_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://pip.pypa.io/en/stable/">pip</a><ul>
+<li><a href="https://pip.pypa.io/en/stable/">官方文档</a></li>
+<li>作用</li>
+<li>基本命令: <code>install, uninstall, list, freeze</code></li>
+<li><a href="https://pip.pypa.io/en/stable/reference/">参考手册</a></li>
+<li>加速配置</li>
+</ul>
+</li>
+</ul>
+<pre><code>vim ~/.pip/pip.conf 加入这个配置使用doubanio的源,可以加速下载python相关依赖包
+
+[global]
+index-url = http://pypi.doubanio.com/simple  
+trusted-host = pypi.doubanio.com  
+</code></pre>
+
+<p>如果找不到路径:</p>
+<p><code>mkdir ~/.pip</code></p>
+<p>验证:
+随意下载一个 pip install -U ipython</p>
+<p>可以看见: 源成为了doubanio</p>
+<p><code>特别特别注意一下</code> ,这个地方配置前边不要有空格,前边配置为pypi.douban.com要修改一下哈</p>
+<ul>
+<li>virtualenv<ul>
+<li>[官方文档]</li>
+<li>作用</li>
+<li>基本命令</li>
+</ul>
+</li>
+</ul>
+<p><code>pip install virtualenv</code></p>
+<ul>
+<li>virtualwrapper<ul>
+<li><a href="https://virtualenv.pypa.io/en/latest/">官方文档</a></li>
+<li>作用</li>
+<li>基本命令</li>
+</ul>
+</li>
+</ul>
+<p><code>pip install virtualenvwrapper</code></p>
+<pre><code> #python virtualenv管理工具,避免各种virtualenv太多目录各种散落
+ if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+ export WORKON_HOME=$HOME/.virtualenvs
+ source /usr/local/bin/virtualenvwrapper.sh
+ fi
+
+</code></pre>
+
+<p>新打开一个terminal</p>
+<p><code>workon</code></p>
+<p><code>mkvirtualenv courses</code></p>
+<p>在自己的~/.bash_rc加入</p>
+<ul>
+<li>ipython</li>
+</ul>
+<p><code>pip install ipython</code></p>
+<h2 id="pydev">Pydev环境搭建<a class="headerlink" href="#pydev" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="http://www.vogella.com/tutorials/Python/article.html">Python Development with PyDev and Eclipse - Tutorial</a></li>
+<li><a href="http://www.pydev.org/index.html">官网</a></li>
+</ul>
+<h3 id="pydev_1">Pydev快捷键和小技巧<a class="headerlink" href="#pydev_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>配置多个虚拟环境. 以courses,IDC,DevOps</li>
+<li><a href="http://www.cheatography.com/walthered/cheat-sheets/pydev-shortcut-cheat-sheet/">快捷键大全</a></li>
+<li><a href="http://www.pydev.org/manual_adv_features.html">快捷键</a></li>
+<li>简单程序调试</li>
+<li><a href="http://showmedo.com/videotutorials/python">视频 Python Videos, Tutorials and Screencasts</a></li>
+<li><a href="http://showmedo.com/videotutorials/series?name=mcfckfJ4w">视频: virtualenv</a></li>
+<li><a href="http://www.pydev.org/video_pydev_20.html">视频: 快捷键技巧</a></li>
+</ul>
+<h3 id="pydev_2">Pydev插件<a class="headerlink" href="#pydev_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>vrapper</li>
+<li>GFM: github flavor markdown</li>
+<li>AnyEdit Tools</li>
+</ul>
+<h3 id="python_2">初识Python<a class="headerlink" href="#python_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://www.python.org/">很多人都会忽视的地方:Python官网</a> </li>
+<li><a href="https://www.python.org/doc/">Python官方文档</a></li>
+<li>
+<p><a href="https://docs.python.org/2/">Python 2.x文档</a></p>
+</li>
+<li>
+<p><a href="http://python3-cookbook.readthedocs.org/zh_CN/latest/index.html">中文版: Python Cookbook 3rd Edition Documentation</a></p>
+</li>
+<li><a href="https://github.com/yidao620c/python3-cookbook">项目地址: Python Cookbook 3rd Edition Documentation</a></li>
+<li><a href="http://www.runoob.com/python/python-tutorial.html">Python 基础教程</a></li>
+<li><a href="https://geosmart.github.io/2016/01/20/搭建Python工程化开发框架/">搭建Python工程化开发框架</a></li>
+</ul>
+<h2 id="2">2、<a href="https://docs.python.org/2/tutorial/index.html">基本操作</a><a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<h3 id="it_works">It works!!!<a class="headerlink" href="#it_works" title="Permanent link">&para;</a></h3>
+<h3 id="_1">输出/打印<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>print</li>
+<li><a href="https://docs.python.org/2/library/pprint.html">pprint</a></li>
+<li>format</li>
+<li>json.dumps</li>
+</ul>
+<h3 id="_2">输入<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>raw_input</li>
+<li>sys.args</li>
+<li>OptionParser</li>
+</ul>
+<h3 id="_3">基本运算操作<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<h3 id="_4">常用数据结构<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>tuple</li>
+<li>list<ul>
+<li>列表解析</li>
+</ul>
+</li>
+<li>dict</li>
+<li>
+<p>set</p>
+</li>
+<li>
+<p>迭代器</p>
+<ul>
+<li>yield</li>
+</ul>
+</li>
+</ul>
+<h3 id="_5">效率提升数据结构<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p><a href="https://docs.python.org/2/library/collections.html">collections</a></p>
+<ul>
+<li>nametuple</li>
+<li>Counter</li>
+<li>defaultdict</li>
+</ul>
+<p>其他非常有用的数据类型 </p>
+<ul>
+<li><a href="https://docs.python.org/2/library/datatypes.html">datetime,calendar,heapq</a></li>
+</ul>
+<h2 id="_6">流程控制<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<ul>
+<li>if/else</li>
+<li>for</li>
+<li>while</li>
+<li>break</li>
+<li>continue</li>
+</ul>
+<h2 id="_7">高阶函数(函数式编程)<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<ul>
+<li>map</li>
+<li>reduce</li>
+<li>filter</li>
+</ul>
+<h3 id="_8">标准库<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p><a href="https://docs.python.org/2/library/index.html">The Python Standard Library</a></p>
+<p><a href="http://python.usyiyi.cn/python_278/library/argparse.html">Python标准库-中文版</a></p>
+<p><a href="https://docs.python.org/2/library/functions.html#non-essential-built-in-functions">non-essential-built-in-functions</a></p>
+<ul>
+<li>zip</li>
+<li>getattr</li>
+<li>setattr</li>
+</ul>
+<p><a href="https://docs.python.org/2/library/future_builtins.html">future_builtins</a></p>
+<ul>
+<li>unicode 和 str编码问题</li>
+</ul>
+<h3 id="_9">一切都很简单,但是我们得按规范干<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="http://zh-google-styleguide.readthedocs.org/en/latest/google-python-styleguide/python_style_rules/">Python语言规范,pep8</a><ul>
+<li>借助工具: pylint, Pydev 代码分析,格式化</li>
+</ul>
+</li>
+</ul>
+<h4 id="_10">典型语言规范问题<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
+<ul>
+<li>函数/变量 <a href="http://zh-google-styleguide.readthedocs.org/en/latest/google-python-styleguide/python_style_rules/#id16">Python之父Guido推荐的规范</a></li>
+<li>文件打开 <a href="http://zh-google-styleguide.readthedocs.org/en/latest/google-python-styleguide/python_style_rules/#sockets">with使用</a></li>
+<li>main函数 <a href="http://zh-google-styleguide.readthedocs.org/en/latest/google-python-styleguide/python_style_rules/#main">恰当地使用<strong>main</strong></a></li>
+</ul>
+<h2 id="3">3、类<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<h3 id="_11">基本概念<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<h4 id="_12">类概念<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
+<ul>
+<li>类(Class): 用来描述具有相同的属性和方法的对象的集合。它定义了该集合中每个对象所共有的属性和方法。对象是类的实例。</li>
+<li>类变量：类变量在整个实例化的对象中是公用的。类变量定义在类中且在函数体之外。类变量通常不作为实例变量使用。</li>
+<li>数据成员：类变量或者实例变量用于处理类及其实例对象的相关的数据。</li>
+<li>类方法：类中定义的函数。</li>
+<li>
+<p><a href="http://zh-google-styleguide.readthedocs.org/en/latest/google-python-styleguide/python_style_rules/#id11">从object继承</a></p>
+</li>
+<li>
+<p>继承：即一个派生类（derived class）继承基类（base class）的字段和方法。继承也允许把一个派生类的对象作为一个基类对象对待。例如，有这样一个设计：一个Dog类型的对象派生自Animal类，这是模拟&rdquo;是一个（is-a）&rdquo;关系（例图，Dog是一个Animal）。</p>
+</li>
+<li>
+<p>类方法重写：如果从父类继承的方法不能满足子类的需求，可以对其进行改写，这个过程叫方法的覆盖（override），也称为方法的重写。</p>
+</li>
+<li>
+<p>基础重载方法</p>
+</li>
+</ul>
+<h4 id="_13">多继承<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
+<h4 id="_14">对象<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
+<ul>
+<li>类实例化：创建一个类的实例，类的具体对象。  </li>
+<li>对象：通过类定义的数据结构实例。对象包括两个数据成员（类变量和实例变量）和方法。  </li>
+<li>实例变量：定义在方法中的变量，只作用于当前实例的类。</li>
+</ul>
+<h3 id="mongoengineflask_admin">使用mongoengine和flask_admin实战类与继承[<code>精读以下文档</code>]<a class="headerlink" href="#mongoengineflask_admin" title="Permanent link">&para;</a></h3>
+<h4 id="mongoengine">mongoengine<a class="headerlink" href="#mongoengine" title="Permanent link">&para;</a></h4>
+<p><a href="http://docs.mongoengine.org/">官方文档,快速入门,使用</a><br />
+<a href="http://www.runoob.com/mongodb/nosql.html">MongoDB 教程,了解基本概念,增删查改一定要会</a><br />
+[中文版]+MongoDB权威指南 书
+<a href="https://docs.mongodb.org/">mongodb数据库官网文档</a></p>
+<h4 id="flask_admin">flask_admin<a class="headerlink" href="#flask_admin" title="Permanent link">&para;</a></h4>
+<p><a href="http://ericzhong.github.io/2013/12/17/flask-admin/">Flask-Admin快速入门,概览很简单</a><br />
+<a href="http://docs.jinkan.org/docs/flask/">Flask中文教程,非常值得研究</a><br />
+<a href="http://flask-admin.readthedocs.io/en/latest/">Flask_admin官方文档, 做技术英文文档绕不过去,多多读</a>  </p>
+<pre><code class="python"># coding:utf-8
+'''
+Created on 2016年4月24日
+
+@author: likaiguo
+'''
+from __future__ import print_function, unicode_literals
+import datetime
+
+
+class User(object):
+    &quot;&quot;&quot;
+    用户类
+    &quot;&quot;&quot;
+
+    id = 0
+    username = ''
+    email = ''
+    password = ''
+    regiter_time = datetime.datetime(2014, 12, 10)
+
+    def __init__(self, username=''):
+        self.username = username
+
+    def __str__(self):
+
+        return 'User: %s' % self.username
+
+    def get_register_date(self):
+
+        return datetime.datetime.now() - self.regiter_time
+
+    def get_register_days(self):
+        &quot;&quot;&quot;
+        获取注册天数
+        &quot;&quot;&quot;
+        delta = self.get_register_date()
+
+        return delta.days
+
+    @staticmethod
+    def print_hello(x='hello'):
+
+        print(x)
+
+    @property
+    def register_days(self):
+
+        return self.get_register_days()
+
+    @property
+    def regiter_seconds(self):
+        delta = self.get_register_date()
+        return delta.seconds
+
+
+class Utils(object):
+
+    @staticmethod
+    def print_json(data):
+        import json
+        print(json.dumps(data, indent=4, ensure_ascii=False))
+
+
+class SubUser(User):
+
+    def __init__(self, username=''):
+
+        self.username = 'sub_username: %s' % username
+
+    def get_register_days(self):
+        days = User.get_register_days(self)
+        return str(days)
+
+
+if __name__ == '__main__':
+
+    user = User()
+    user.username = 'likaiguo'
+
+    print(user.username)
+    print(&quot;id:%d : username: %s&quot; % (user.id, user.username))
+    days1 = user.get_register_days()
+    user2 = SubUser()
+    days2 = user2.get_register_days()
+
+    user3 = User(username='likaiguo-2')
+
+    print(user3)
+
+    user4 = SubUser(username='likaiguo-3')
+
+    print(user4)
+
+    User.print_hello(x='haowan-hello')
+
+    Utils.print_json(data={'name': '李开国', 'id': 100, 'other': {1: 2}})
+
+    print(user4.register_days)
+
+</code></pre>
+
+<h4 id="_15">装饰器<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
+<ul>
+<li>@staticmethod</li>
+<li>@classmethod</li>
+<li>@property</li>
+<li>自定义装饰器</li>
+</ul>
+<h3 id="hostuser">从零开始构造类(Host,User)<a class="headerlink" href="#hostuser" title="Permanent link">&para;</a></h3>
+<p><img alt="最简易类" src="./images/User_Host.png" /></p>
+<h3 id="mongoengine_1">从mongoengine继承<a class="headerlink" href="#mongoengine_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>连接数据库</li>
+<li>写入数据</li>
+<li>验证写入</li>
+</ul>
+<h3 id="flask_admin_1">与flask_admin集成<a class="headerlink" href="#flask_admin_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>展示到页面</li>
+</ul>
+<pre><code class="python"># coding:utf-8
+'''
+Created on 2016年4月23日
+
+@author: likaiguo
+
+第一步:  workon  haowan-courses
+第二步: pip install mongoengine
+第三步: 写下面的程序
+
+'''
+from __future__ import unicode_literals, print_function
+import datetime
+from mongoengine import Document, StringField, DateTimeField
+from mongoengine import connect
+
+
+# 连接mongo数据库:haowan
+HOST = '192.168.8.108'
+
+connect('haowan', host=HOST)
+
+
+class Host(Document):
+    &quot;&quot;&quot;
+    数据库模型
+    &quot;&quot;&quot;
+
+    name = StringField()
+    add_time = DateTimeField(default=datetime.datetime.now())
+
+    meta = {
+        'collection': 'host',
+    }
+
+
+if __name__ == '__main__':
+    from flask import Flask
+    import flask_admin as admin
+    from flask_admin.contrib.mongoengine import ModelView
+
+    # Flask App
+    app = Flask('hello')
+    app.config['SECRET_KEY'] = '123456790'
+
+    # 用flask_admin来展示
+    admin = admin.Admin(app, u'聘宝数据分析平台')
+    admin.add_view(ModelView(Host))
+    app.run(debug=True)
+
+
+</code></pre>
+
+<h3 id="_16">大家存在的一些问题<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<ul>
+<li>代码规范: 注释位置,命名</li>
+<li>理解你正在写的程序</li>
+</ul>
+<h2 id="4all_in_one">4、All in One 完成一个复杂任务<a class="headerlink" href="#4all_in_one" title="Permanent link">&para;</a></h2>
+<h2 id="pydev_3">善用工具:pydev<a class="headerlink" href="#pydev_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>代码风格统一: 自动sort import包,编辑器format代码</li>
+<li>自定义风格: pep8各种警告,ignore</li>
+<li>学会使用调试: 一定要爱上调试(F5,F6,F7);调试和运行(F11,Ctrl+F11)</li>
+</ul>
+<h3 id="_17">测试<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<p><a href="https://www.ibm.com/developerworks/cn/aix/library/au-cleancode/">用Python编写干净、可测试、高质量的代码</a></p>
+<p>编写软件是人所承担的最复杂的任务之一。
+AWK 编程语言和 &ldquo;K and R C&rdquo; 的作者之一 Brian Kernigan 在 Software Tools 一书中总结了软件开发的真实性质，
+<strong>“控制复杂性是软件开发的根本。”</strong></p>
+<ul>
+<li>成功的软件开发人员会按照便于自动化的方式运行测试，这样就可以不断地证明软件工作正常。</li>
+<li>他们严格地遵守自己的方法，在每个阶段都进行认真的复查，寻找重构的机会。</li>
+<li>他们经常思考如何确保其软件是可测试、可读且可维护的。</li>
+</ul>
+<h4 id="_18">测试的重要性<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
+<p><a href="http://blog.jobbole.com/55180/">提高你的Python能力：理解单元测试</a></p>
+<ul>
+<li>测试可以保证你的代码在一系列给定条件下正常工作</li>
+<li>测试允许人们确保对代码的改动不会破坏现有的功能</li>
+<li>测试迫使人们在不寻常条件的情况下思考代码，这可能会揭示出逻辑错误</li>
+<li>良好的测试要求模块化，解耦代码，这是一个良好的系统设计的标志</li>
+</ul>
+<h4 id="python_3">Python中的测试框架<a class="headerlink" href="#python_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li>doctest  标准库</li>
+<li>unittest 标准库</li>
+<li>nose 第三方框架,各种插件</li>
+</ul>
+<p>各种应对的场景不同,洞悉各个优秀的开源项目.例如: pyes,flask_admin,flask,django</p>
+<h4 id="_19">练习单元测试: 一定要动起手来,一定要练<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
+<p><a href="http://hahack.com/wiki/python3-unittest.html"> doctest、unittest 和 nose速览</a></p>
+<h3 id="idc">IDC项目的各个细节<a class="headerlink" href="#idc" title="Permanent link">&para;</a></h3>
+<p>其中涉及到django的开发,基础信息包使用psutil, platform</p>
+<p>从最简单的开始</p>
+<h3 id="psutil">psutil使用<a class="headerlink" href="#psutil" title="Permanent link">&para;</a></h3>
+<p><a href="https://pythonhosted.org/psutil/">psutil官方文档</a>
+<a href="https://github.com/giampaolo/psutil">源码</a>
+<a href="https://github.com/likaiguo/psdash">赏析flask,psutil,bootstrap案例</a></p>
+<h3 id="platform">platform使用<a class="headerlink" href="#platform" title="Permanent link">&para;</a></h3>
+<p><a href="https://docs.python.org/2/library/platform.html">python标准库:platform</a></p>
+<p><a href="http://www.oschina.net/translate/linux-system-mining-with-python">使用 Python 获取 Linux 系统信息</a></p>
+<h3 id="django">初识django<a class="headerlink" href="#django" title="Permanent link">&para;</a></h3>
+<p>我最喜欢的是django的官方文档. 结合查询特定的中英文资料对单个点理解,再回去看官方文档.</p>
+<p>django之所以成为Python社区中最流行的Web框架,其中最重要一点是其文档详实.</p>
+<p><a href="http://python.usyiyi.cn/django/index.html">django 1.8.2中文翻译文档</a>
+<a href="http://python.usyiyi.cn/django/intro/tutorial01.html">编写你的第一个Django应用</a></p>
+<p>这个教程的千万千万一定要把序言和tutorial的前三节看了哈.</p>
+<h3 id="_20">异常处理<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<ul>
+<li>异常捕捉</li>
+</ul>
+<h3 id="_21">日志<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="operation/" class="btn btn-neutral float-right" title="运维相关">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+        <span style="margin-left: 15px"><a href="operation/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 0.15.3
+Build Date UTC : 2016-08-29 08:00:03.590691
+-->

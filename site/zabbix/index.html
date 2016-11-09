@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="liudong">
+  
+  <title>Zabbix使用 - Pinbot 运维</title>
+  
+
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Zabbix使用";
+    var mkdocs_page_input_path = "zabbix.md";
+    var mkdocs_page_url = "/zabbix/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-36723568-3', 'mkdocs.org');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Pinbot 运维</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../operation/">运维相关</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../seafile/">Seafile私有云使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../gitUse/">Gitlab使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../openvpn/">VPN部署使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../vps/">VPS使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../network/">网络手册</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../jenkins/">Jenkins部署使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../gitlab/">Gitlab部署</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Zabbix使用</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#zabbix">Zabbix监控部署</a></li>
+                
+                    <li><a class="toctree-l4" href="#1">1. 服务端安装</a></li>
+                
+                    <li><a class="toctree-l4" href="#2">2. 客户端安装</a></li>
+                
+                    <li><a class="toctree-l4" href="#3_webzabbix">3. web端访问zabbix</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../address/">常用地址</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../clusters/">集群部署</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../daily/">日常笔记</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Pinbot 运维</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Zabbix使用</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="zabbix">Zabbix监控部署<a class="headerlink" href="#zabbix" title="Permanent link">&para;</a></h1>
+<div class="toc">
+<ul>
+<li><a href="#zabbix">Zabbix监控部署</a><ul>
+<li><a href="#1">1. 服务端安装</a><ul>
+<li><a href="#11_zabbix">1.1 下载zabbix 服务端 安装包</a></li>
+<li><a href="#12_mysqlweb">1.2 安装所需依赖插件（mysql+web）</a></li>
+<li><a href="#13_mysqlzabbix">1.3 mysql数据库初始化及创建zabbix所需账号</a></li>
+<li><a href="#14_web_php">1.4 修改web端 PHP配置文件</a></li>
+<li><a href="#15_zabbix">1.5 导入zabbix所需数据库</a></li>
+<li><a href="#16">1.6 服务端配置</a></li>
+<li><a href="#17">1.7 服务端启动</a></li>
+</ul>
+</li>
+<li><a href="#2">2. 客户端安装</a><ul>
+<li><a href="#21">2.1 客户端安装包下载</a></li>
+<li><a href="#22">2.2 客户端配置</a></li>
+<li><a href="#23">2.3 客户端启动</a></li>
+<li><a href="#24">2.4 加入开机自启动</a></li>
+</ul>
+</li>
+<li><a href="#3_webzabbix">3. web端访问zabbix</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="1">1. 服务端安装<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<h3 id="11_zabbix">1.1 下载zabbix 服务端 安装包<a class="headerlink" href="#11_zabbix" title="Permanent link">&para;</a></h3>
+<pre><code>#  mkdir /data &amp;&amp; cd /data
+# wget http://repo.zabbix.com/zabbix/3.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_3.0-1+trusty_all.deb
+# dpkg -i zabbix-release_3.0-1+trusty_all.deb
+# apt-get update
+</code></pre>
+
+<h3 id="12_mysqlweb">1.2 安装所需依赖插件（mysql+web）<a class="headerlink" href="#12_mysqlweb" title="Permanent link">&para;</a></h3>
+<pre><code># apt-get install zabbix-server-mysql zabbix-frontend-php
+</code></pre>
+
+<h3 id="13_mysqlzabbix">1.3 mysql数据库初始化及创建zabbix所需账号<a class="headerlink" href="#13_mysqlzabbix" title="Permanent link">&para;</a></h3>
+<pre><code># groupadd zabbix
+# useradd -r -s /sbin/nologin -g zabbix zabbix
+
+# mysqladmin -uroot password ‘pinbot123'
+#  mysql -uroot -p ‘pinbot123'（登陆数据库）
+mysql&gt;create database zabbix character set utf8 collate utf8_bin;
+mysql&gt;grant all privileges on zabbix.* to zabbix@localhost identified by 'zabbix';
+mysql&gt;flush privileges;
+
+注：-S /data/mysql/data/mysql.sock 是指定mysql.sock文件路径
+</code></pre>
+
+<h3 id="14_web_php">1.4 修改web端 PHP配置文件<a class="headerlink" href="#14_web_php" title="Permanent link">&para;</a></h3>
+<pre><code>#  vim /etc/php5/apache2/php.ini
+date.timezone = Asia/Shanghai
+max_execution_time = 300
+post_max_size = 32M
+max_input_time=300
+memory_limit = 128M
+mbstring.func_overload = off
+always_populate_raw_post_data = -1
+
+# cp -r /usr/share/zabbix /var/www/html/zabbix
+
+注：拷贝操作是web界面能访问的关键
+</code></pre>
+
+<h3 id="15_zabbix">1.5 导入zabbix所需数据库<a class="headerlink" href="#15_zabbix" title="Permanent link">&para;</a></h3>
+<pre><code># cd /usr/share/doc/zabbix-server-mysql
+# zcat create.sql.gz | mysql -uroot -p’pinbot123’
+</code></pre>
+
+<h3 id="16">1.6 服务端配置<a class="headerlink" href="#16" title="Permanent link">&para;</a></h3>
+<pre><code># vim /etc/zabbix/zabbix_server.conf
+DBName=zabbix 数据库名称
+DBUser=zabbix 数据库用户
+DBPassword=zabbix 数据库密码
+ListenIP=localhost #数据库IP地址，一般为默认
+AlertScriptsPath=/usr/lib/zabbix/alertscripts    #运行脚本存放路径
+</code></pre>
+
+<h3 id="17">1.7 服务端启动<a class="headerlink" href="#17" title="Permanent link">&para;</a></h3>
+<pre><code># /etc/init.d/zabbix-server start
+</code></pre>
+
+<h2 id="2">2. 客户端安装<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<h3 id="21">2.1 客户端安装包下载<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
+<pre><code># apt-get install zabbix-agent
+</code></pre>
+
+<h3 id="22">2.2 客户端配置<a class="headerlink" href="#22" title="Permanent link">&para;</a></h3>
+<pre><code>注意：zabbix_agentd.conf 是客户端的配置文件，这里配置的目的是对自身进行监控，此处的192.168.0.192是服务端的IP
+
+# vim /etc/zabbix/zabbix_agentd.conf
+Server=192.168.0.192        # 监控服务器的IP
+ListenPort=10050            # 监听的端口
+StartAgents=1               # 启动的客户端进程
+ServerActive=192.168.0.192：10051  # 主动模式下的监控服务器IP（主动模式必须）
+/tmp/zabbix_agentd.log                       #修改日志路径
+UnsafeUserParameters=1                    #默认是不启用自定义脚本功能的，需开启
+Hostname=zabbix.com         #监控服务器的名称，大小写敏感（主动模式必须），邮件报警时需要用到
+</code></pre>
+
+<h3 id="23">2.3 客户端启动<a class="headerlink" href="#23" title="Permanent link">&para;</a></h3>
+<pre><code># /etc/init.d/zabbix-agent start
+</code></pre>
+
+<h3 id="24">2.4 加入开机自启动<a class="headerlink" href="#24" title="Permanent link">&para;</a></h3>
+<pre><code># cp /usr/sbin/zabbix_server /etc/rc.d/init.d/zabbix_server
+# cp /usr/sbin/zabbix_agentd /etc/rc.d/init.d/zabbix_agentd
+# chmod +x # /etc/rc.d/init.d/zabbix_server
+# chmod +x # /etc/rc.d/init.d/zabbix_agentd
+</code></pre>
+
+<h2 id="3_webzabbix">3. web端访问zabbix<a class="headerlink" href="#3_webzabbix" title="Permanent link">&para;</a></h2>
+<p>访问地址：<a href="http://192.168.0.192/zabbix">http://192.168.0.192/zabbix</a> #http://服务器地址或域名/zabbix<br />
+默认用户名：admin  默认密码：zabbix</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../address/" class="btn btn-neutral float-right" title="常用地址">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../gitlab/" class="btn btn-neutral" title="Gitlab部署"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../gitlab/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../address/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

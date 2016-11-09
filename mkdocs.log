@@ -1,0 +1,288 @@
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 11:18:33 server:281] Serving on http://0.0.0.0:8000
+[I 160622 11:18:33 handlers:59] Start watching changes
+[I 160622 11:18:33 handlers:61] Start detecting changes
+[I 160622 11:18:37 handlers:132] Browser Connected: http://192.168.0.119:8000/
+[I 160622 11:18:49 handlers:132] Browser Connected: http://192.168.0.119:8000/operation/
+[I 160622 11:18:55 handlers:132] Browser Connected: http://192.168.0.119:8000/gitlab/
+[I 160622 11:18:57 handlers:132] Browser Connected: http://192.168.0.119:8000/seafile/
+[I 160622 11:19:06 handlers:132] Browser Connected: http://192.168.0.119:8000/zabbix/
+[I 160622 11:19:07 handlers:132] Browser Connected: http://192.168.0.119:8000/gitlab/
+[I 160622 11:19:08 handlers:132] Browser Connected: http://192.168.0.119:8000/openvpn/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 11:26:30 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/seafile.md
+[I 160622 11:26:31 handlers:132] Browser Connected: http://192.168.0.119:8000/openvpn/
+[I 160622 11:26:37 handlers:132] Browser Connected: http://192.168.0.119:8000/seafile/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 11:27:36 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/seafile.md
+[I 160622 11:27:37 handlers:132] Browser Connected: http://192.168.0.119:8000/seafile/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 11:28:09 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/seafile.md
+[I 160622 11:28:09 handlers:132] Browser Connected: http://192.168.0.119:8000/seafile/
+[I 160622 11:28:32 handlers:132] Browser Connected: http://192.168.0.119:8000/network/
+[I 160622 11:28:44 handlers:132] Browser Connected: http://192.168.0.119:8000/address/
+[I 160622 11:28:52 handlers:132] Browser Connected: http://192.168.0.119:8000/address/
+[I 160622 11:28:55 handlers:132] Browser Connected: http://192.168.0.119:8000/seafile/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 11:29:35 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/seafile.md
+[I 160622 11:29:36 handlers:132] Browser Connected: http://192.168.0.119:8000/seafile/
+[I 160622 11:29:42 handlers:132] Browser Connected: http://192.168.0.119:8000/seafile/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 11:29:52 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/seafile.md
+[I 160622 11:29:53 handlers:132] Browser Connected: http://192.168.0.119:8000/seafile/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 11:30:06 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/seafile.md
+[I 160622 11:30:06 handlers:132] Browser Connected: http://192.168.0.119:8000/seafile/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 11:30:35 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/seafile.md
+[I 160622 11:30:35 handlers:132] Browser Connected: http://192.168.0.119:8000/seafile/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 11:30:41 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/seafile.md
+[I 160622 11:30:41 handlers:132] Browser Connected: http://192.168.0.119:8000/seafile/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 11:30:46 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/seafile.md
+[I 160622 11:30:46 handlers:132] Browser Connected: http://192.168.0.119:8000/seafile/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 11:30:51 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/seafile.md
+[I 160622 11:30:52 handlers:132] Browser Connected: http://192.168.0.119:8000/seafile/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 11:31:05 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/seafile.md
+[I 160622 11:31:05 handlers:132] Browser Connected: http://192.168.0.119:8000/seafile/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 11:31:33 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/seafile.md
+[I 160622 11:31:33 handlers:132] Browser Connected: http://192.168.0.119:8000/seafile/
+[I 160622 11:31:39 handlers:132] Browser Connected: http://192.168.0.119:8000/seafile/
+[I 160622 11:32:01 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+[I 160622 11:32:10 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+[I 160622 11:32:13 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+[I 160622 11:32:22 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+[I 160622 11:32:27 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+[I 160622 11:32:30 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+[I 160622 11:32:40 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 11:32:50 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/seafile.md
+[I 160622 11:32:50 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 11:33:20 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/vps.md
+[I 160622 11:33:21 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 11:33:35 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/vps.md
+[I 160622 11:33:36 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 11:33:46 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/vps.md
+[I 160622 11:33:47 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+[I 160622 11:33:51 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 11:34:06 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/vps.md
+[I 160622 11:34:07 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+[I 160622 11:34:10 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+[I 160622 11:34:14 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+[I 160622 11:34:18 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 11:34:31 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/vps.md
+[I 160622 11:34:32 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+[I 160622 11:34:39 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+[I 160622 11:34:44 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 11:34:52 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/vps.md
+[I 160622 11:34:53 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+[I 160622 11:35:02 handlers:132] Browser Connected: http://192.168.0.119:8000/network/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 11:35:40 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/network.md
+[I 160622 11:35:41 handlers:132] Browser Connected: http://192.168.0.119:8000/network/
+[I 160622 11:35:45 handlers:132] Browser Connected: http://192.168.0.119:8000/network/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 11:35:52 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/network.md
+[I 160622 11:35:53 handlers:132] Browser Connected: http://192.168.0.119:8000/network/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 11:36:41 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/network.md
+[I 160622 11:36:41 handlers:132] Browser Connected: http://192.168.0.119:8000/network/
+[I 160622 11:36:46 handlers:132] Browser Connected: http://192.168.0.119:8000/network/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 11:36:55 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/network.md
+[I 160622 11:36:55 handlers:132] Browser Connected: http://192.168.0.119:8000/network/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 11:36:59 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/network.md
+[I 160622 11:36:59 handlers:132] Browser Connected: http://192.168.0.119:8000/network/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 11:37:11 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/network.md
+[I 160622 11:37:12 handlers:132] Browser Connected: http://192.168.0.119:8000/network/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 11:38:50 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/network.md
+[I 160622 11:38:51 handlers:132] Browser Connected: http://192.168.0.119:8000/network/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 11:39:25 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/network.md
+[I 160622 11:39:25 handlers:132] Browser Connected: http://192.168.0.119:8000/network/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 11:39:26 handlers:79] Ignore: /Users/liudong/github/documents/docs/network.md
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 11:39:44 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/network.md
+[I 160622 11:39:45 handlers:132] Browser Connected: http://192.168.0.119:8000/network/
+[I 160622 11:39:51 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+[I 160622 11:40:18 handlers:132] Browser Connected: http://192.168.0.119:8000/openvpn/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 11:44:56 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/openvpn.md
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 11:44:57 handlers:132] Browser Connected: http://192.168.0.119:8000/openvpn/
+[I 160622 11:45:37 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 11:49:10 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/vps.md
+[I 160622 11:49:11 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 11:49:22 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/vps.md
+[I 160622 11:49:22 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 11:49:30 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/vps.md
+[I 160622 11:49:30 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 11:49:56 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/vps.md
+[I 160622 11:49:57 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 11:50:01 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/vps.md
+[I 160622 11:50:02 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 11:58:58 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/address.md
+[I 160622 11:58:59 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 11:59:06 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/vps.md
+[I 160622 11:59:07 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 11:59:21 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/vps.md
+[I 160622 11:59:22 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 11:59:27 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/vps.md
+[I 160622 11:59:29 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 11:59:31 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/vps.md
+[I 160622 11:59:31 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 13:44:19 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/vps.md
+[I 160622 13:44:21 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+[I 160622 13:44:29 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 13:46:06 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/vps.md
+[I 160622 13:46:07 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 13:48:57 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/vps.md
+[I 160622 13:48:59 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 13:50:44 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/vps.md
+[I 160622 13:50:46 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 13:52:07 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/vps.md
+[I 160622 13:52:08 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 13:52:32 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/vps.md
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 13:52:33 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 13:52:35 handlers:79] Ignore: /Users/liudong/github/documents/docs/vps.md
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 13:52:46 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/vps.md
+[I 160622 13:52:47 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 13:54:03 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/vps.md
+[I 160622 13:54:04 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+[I 160622 14:03:11 handlers:132] Browser Connected: http://192.168.0.119:8000/network/
+[I 160622 16:12:55 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+[I 160622 16:19:20 handlers:132] Browser Connected: http://192.168.0.119:8000/
+[I 160622 16:19:31 handlers:132] Browser Connected: http://192.168.0.119:8000/
+[I 160622 16:19:34 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+[I 160622 17:29:37 handlers:132] Browser Connected: http://192.168.0.119:8000/openvpn/
+[I 160622 17:29:57 handlers:132] Browser Connected: http://192.168.0.119:8000/network/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+ERROR   -  file not found: /Users/liudong/github/documents/docs/jenkins.md 
+ERROR   -  Error building page jenkins.md 
+[E 160622 17:34:43 ioloop:629] Exception in callback <bound method type.poll_tasks of <class 'livereload.handlers.LiveReloadHandler'>>
+    Traceback (most recent call last):
+      File "/usr/local/lib/python2.7/site-packages/tornado/ioloop.py", line 1039, in _run
+        return self.callback()
+      File "/usr/local/lib/python2.7/site-packages/livereload/handlers.py", line 66, in poll_tasks
+        filepath, delay = cls.watcher.examine()
+      File "/usr/local/lib/python2.7/site-packages/livereload/watcher.py", line 73, in examine
+        func and func()
+      File "/usr/local/lib/python2.7/site-packages/mkdocs/commands/serve.py", line 74, in builder
+        build(config, live_server=True, clean_site_dir=True)
+      File "/usr/local/lib/python2.7/site-packages/mkdocs/commands/build.py", line 289, in build
+        build_pages(config)
+      File "/usr/local/lib/python2.7/site-packages/mkdocs/commands/build.py", line 249, in build_pages
+        dump_json)
+      File "/usr/local/lib/python2.7/site-packages/mkdocs/commands/build.py", line 160, in _build_page
+        input_content = io.open(input_path, 'r', encoding='utf-8').read()
+    IOError: [Errno 2] No such file or directory: '/Users/liudong/github/documents/docs/jenkins.md'
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 160622 17:35:14 handlers:92] Reload 1 waiters: /Users/liudong/github/documents/docs/jenkins.md
+[I 160622 17:35:15 handlers:132] Browser Connected: http://192.168.0.119:8000/network/#_2
+[I 160622 17:35:20 handlers:132] Browser Connected: http://192.168.0.119:8000/jenkins/
+[I 160623 10:15:02 handlers:132] Browser Connected: http://192.168.0.119:8000/seafile/
+[I 160623 10:16:04 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+[I 160623 10:25:47 handlers:132] Browser Connected: http://192.168.0.119:8000/
+[I 160623 10:25:50 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+[I 160623 14:14:40 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+[I 160623 14:32:37 handlers:132] Browser Connected: http://192.168.0.119:8000/gitlab/
+[I 160623 14:32:39 handlers:132] Browser Connected: http://192.168.0.119:8000/seafile/
+[I 160623 14:32:44 handlers:132] Browser Connected: http://192.168.0.119:8000/operation/
+[I 160623 14:33:03 handlers:132] Browser Connected: http://192.168.0.119:8000/seafile/
+[I 160623 14:33:07 handlers:132] Browser Connected: http://192.168.0.119:8000/jenkins/
+[I 160623 14:33:09 handlers:132] Browser Connected: http://192.168.0.119:8000/zabbix/
+[I 160623 14:33:11 handlers:132] Browser Connected: http://192.168.0.119:8000/address/
+[I 160623 14:33:13 handlers:132] Browser Connected: http://192.168.0.119:8000/daily/
+[I 160624 18:29:19 handlers:132] Browser Connected: http://192.168.0.119:8000/
+[I 160624 18:29:23 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+[I 160624 18:29:33 handlers:132] Browser Connected: http://192.168.0.119:8000/vps/
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
